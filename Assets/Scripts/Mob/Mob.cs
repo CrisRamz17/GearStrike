@@ -4,13 +4,7 @@ using UnityEngine;
 
 public class Mob : MonoBehaviour
 {
-    private int health;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private int health;
 
     // Update is called once per frame
     void Update()
@@ -18,6 +12,19 @@ public class Mob : MonoBehaviour
         
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Bullet")
+        {
+            Debug.Log("oof");
+            KYS();
+        }
+        else if (other.gameObject.tag == "Player")
+        {
+            Debug.Log("boo");
+        }
+    }
+    
     public Mob Spawn(int health) 
     {
         GameObject mobObj = Instantiate(gameObject);
@@ -44,6 +51,10 @@ public class Mob : MonoBehaviour
         }
     }
 
+    private void KYS()
+    {
+        Destroy(this.gameObject);
+    }
     private IEnumerator Die()
     {
         Debug.Log("Mob has died");
