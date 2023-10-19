@@ -28,8 +28,9 @@ public class PlayerController : MonoBehaviour
     {
         RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(mouseLook);
+        Debug.DrawRay(ray.origin, ray.direction * 10, Color.yellow);
 
-        if(Physics.Raycast(ray, out hit))
+        if (Physics.Raycast(ray, out hit))
         {
             rotationTarget = hit.point;
         }
