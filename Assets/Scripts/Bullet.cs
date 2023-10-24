@@ -4,11 +4,8 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float life = 3;
-
     void Awake()
     {
-        Destroy(gameObject, life);
         StartCoroutine(DeathTimer(3f));
     }
     private IEnumerator DeathTimer(float seconds)
