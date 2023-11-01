@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Mob : MonoBehaviour
 {
-    [SerializeField] private int health;
+    [SerializeField] private int health; //unused for now (1-hit kill)
 
     // Update is called once per frame
     void Update()
@@ -16,12 +16,13 @@ public class Mob : MonoBehaviour
     {
         if (other.gameObject.tag == "Bullet")
         {
-            Debug.Log("oof");
-            KYS();
+            Debug.Log("Bullet touched Mob!");
+            Die();
         }
         else if (other.gameObject.tag == "Player")
         {
-            Debug.Log("boo");
+            Debug.Log("Mob touched Player!");
+            other.gameObject.GetComponent<Player>().Die();
         }
     }
     
@@ -35,6 +36,12 @@ public class Mob : MonoBehaviour
         return mob;
     }
 
+    private void Die()
+    {
+        Destroy(this.gameObject);
+    }
+
+    /*
     private void ReduceHealth(int i)
     {
         //Decrease health
@@ -51,10 +58,6 @@ public class Mob : MonoBehaviour
         }
     }
 
-    private void KYS()
-    {
-        Destroy(this.gameObject);
-    }
     private IEnumerator Die()
     {
         Debug.Log("Mob has died");
@@ -63,4 +66,5 @@ public class Mob : MonoBehaviour
 
         yield return null;
     }
+    */
 }
