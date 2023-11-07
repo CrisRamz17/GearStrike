@@ -4,18 +4,18 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
-    public float speed;
+    [SerializeField] private float speed = 8;
     private Vector2 move, mouseLook;
     private Vector3 rotationTarget;
 
     public void onMove(InputAction.CallbackContext context)
     {
-        move = context.ReadValue<Vector2>();
+        move = context.ReadValue<Vector2>(); // read the value of the input
     }
 
     public void onMouseLook(InputAction.CallbackContext context)
     {
-        mouseLook = context.ReadValue<Vector2>();
+        mouseLook = context.ReadValue<Vector2>(); // read the value of the input
     }
     // Start is called before the first frame update
     void Start()
