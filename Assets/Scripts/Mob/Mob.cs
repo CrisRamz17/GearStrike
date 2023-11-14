@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Mob : MonoBehaviour
 {
-    [SerializeField] private int health; //unused for now (1-hit kill)
+    //[SerializeField] private int health; //unused for now (1-hit kill)
 
     // Update is called once per frame
     void Update()
@@ -19,13 +19,19 @@ public class Mob : MonoBehaviour
             Debug.Log("Bullet touched Mob!");
             Die();
         }
-        else if (other.gameObject.tag == "Player")
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Player"))
         {
             Debug.Log("Mob touched Player!");
-            other.gameObject.GetComponent<Player>().Die();
+            Debug.Log("Player is dead! Camera is destroyed!");
+            Destroy(other.gameObject.transform.parent.gameObject);
         }
     }
-    
+
+    /*
     public Mob Spawn(int health) 
     {
         GameObject mobObj = Instantiate(gameObject);
@@ -35,6 +41,7 @@ public class Mob : MonoBehaviour
 
         return mob;
     }
+    */
 
     private void Die()
     {

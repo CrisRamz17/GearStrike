@@ -26,7 +26,7 @@ public class Bullet : MonoBehaviour
         }
         else
         {
-            Debug.Log("Bullet hit something!");
+            Debug.Log("Bullet hit " + collision.gameObject.name + "!");
         }
     }
 }
