@@ -65,7 +65,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4e145f0ee5f8864bb9d7a456b040b8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
 --- !u!114 &1136913132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78,11 +77,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7be0af57c084893448d75ea480ee4892, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sphereRadius: 2
-  sphereDistance: 20
+  sphereRadius: 1
+  sphereDistance: 4
   detectionLayer:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 64
 --- !u!195 &-8408701485323381094
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -117,6 +116,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a3cb1a31ad4e7d4ca531556c3fafcbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stunTime: 3
+  waypoints: []
 --- !u!1 &7992261762631352391
 GameObject:
   m_ObjectHideFlags: 0

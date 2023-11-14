@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float speed = 8;
@@ -35,7 +36,6 @@ public class PlayerController : MonoBehaviour
             rotationTarget = hit.point;
         }
         movePlayerWithAim();
-        
     }
 
     public void movePlayer()
@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
 
         Vector3 aimDirection = new Vector3(rotationTarget.x, 0f, rotationTarget.z);
 
-        if(aimDirection != Vector3.zero)
+        if (aimDirection != Vector3.zero)
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, rotation, 0.15f);
         }
