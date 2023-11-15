@@ -32,7 +32,7 @@ RenderSettings:
   m_FlareFadeSpeed: 3
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
-  m_DefaultReflectionMode: 0
+  m_DefaultReflectionMode: 1
   m_DefaultReflectionResolution: 128
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
@@ -2776,7 +2776,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5543552086131368335}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1406051261
 AudioSource:
@@ -4062,6 +4062,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5543552085096124611, guid: 9f0ad334e67b845359e89c7bac588a50,
+        type: 3}
+      propertyPath: m_SpotAngle
+      value: 62.54956
+      objectReference: {fileID: 0}
     - target: {fileID: 5543552086240926477, guid: 9f0ad334e67b845359e89c7bac588a50,
         type: 3}
       propertyPath: m_IsActive
@@ -4105,7 +4110,7 @@ PrefabInstance:
     - target: {fileID: 5543552086513189183, guid: 9f0ad334e67b845359e89c7bac588a50,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.5812054
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 5543552086513189183, guid: 9f0ad334e67b845359e89c7bac588a50,
         type: 3}
