@@ -26,8 +26,8 @@ public class Mob : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             Debug.Log("Mob touched Player!");
-            Debug.Log("Player is dead! Camera is destroyed!");
-            Destroy(other.gameObject.transform.parent.gameObject);
+            Debug.Log("Player is dead!");
+            Destroy(other.gameObject);
         }
     }
 
