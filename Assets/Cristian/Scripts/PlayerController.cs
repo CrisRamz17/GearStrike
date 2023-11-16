@@ -61,8 +61,10 @@ public class PlayerController : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, rotation, 0.15f);
         }
 
-        Vector3 movement = new Vector3(move.x, 0f, move.y);
+        movePlayer();
 
-        transform.Translate(movement * speed * Time.deltaTime, Space.World);
+        //Vector3 movement = new Vector3(move.x, 0f, move.y);
+
+        //transform.Translate(movement * speed * Time.deltaTime, Space.World);
     }
 }
