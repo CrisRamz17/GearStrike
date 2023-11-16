@@ -9,13 +9,14 @@ public class Weapon : MonoBehaviour
     public float bulletSpeed = 10;
     public float shotCooldown = 2f;
     private float timesinceLastShot;
-
+    public GameObject gunshotSFX;
     void Update()
     {
         timesinceLastShot += Time.deltaTime;
         if (Input.GetMouseButtonDown(0) && timesinceLastShot >= shotCooldown)
         {
             var bullet = Instantiate(bulletPrefab, bulletSpawnpoint.position, bulletSpawnpoint.rotation);
+            Instantiate(gunshotSFX);
             bullet.GetComponent<Rigidbody>().velocity = bulletSpawnpoint.forward * bulletSpeed;
             timesinceLastShot = 0;
         }
