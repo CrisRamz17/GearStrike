@@ -8,5 +8,5 @@ public class PlayerData : ScriptableObject
 {
     //public int health; //unused for now
 
-    public uint checkpoint;
+    public int checkpoint;
 }

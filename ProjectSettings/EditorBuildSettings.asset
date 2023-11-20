@@ -6,6 +6,30 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/John/Lighting Test.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/ElliottScenes/Intro Level 1.unity
+    guid: 69358f99b52b8e746b7c74e1b723f049
+  - enabled: 1
+    path: Assets/ElliottScenes/Intro Level 2.unity
+    guid: e475f3dd21a3ccd458d6430383315ac7
+  - enabled: 1
+    path: Assets/ElliottScenes/Intro Level 3.unity
+    guid: caa2607614276254085b79a1a5749a89
+  - enabled: 1
+    path: Assets/ElliottScenes/Intro Level 4.unity
+    guid: adb0b8508f3ba99449d25da04cfb7806
+  - enabled: 1
+    path: Assets/ElliottScenes/Scene 1.unity
+    guid: 652c97049f0892843a5b567c7a1122c3
+  - enabled: 1
+    path: Assets/ElliottScenes/Set 2 Level 1.unity
+    guid: fc2f8ad000d452a48b9c44cbca92aa8e
+  - enabled: 1
+    path: Assets/ElliottScenes/Set 2 Level 2.unity
+    guid: d2f7fbf6a86fa304dae2e10223ab076a
+  - enabled: 1
+    path: Assets/ElliottScenes/Set 2 Level 3.unity
+    guid: 1cbc4e66912d053419bb11b06831f4d2
+  - enabled: 1
+    path: Assets/ElliottScenes/Set 2 Level 4.unity
+    guid: 680f0549ffc282849b9cfa1b22504df2
   m_configObjects: {}

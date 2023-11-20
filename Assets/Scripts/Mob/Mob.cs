@@ -5,6 +5,12 @@ using UnityEngine;
 public class Mob : MonoBehaviour
 {
     //[SerializeField] private int health; //unused for now (1-hit kill)
+    private SceneFader sceneFader;
+
+    void Start()
+    {
+        sceneFader = FindObjectOfType<SceneFader>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -28,6 +34,7 @@ public class Mob : MonoBehaviour
             Debug.Log("Mob touched Player!");
             Debug.Log("Player is dead!");
             Destroy(other.gameObject);
+            sceneFader.FadeToBlack();
         }
     }
 
