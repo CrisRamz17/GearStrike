@@ -1,35 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SceneFader : MonoBehaviour
 {
     private bool isFading;
     [SerializeField] private Animator animator;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private PlayerData playerData;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public System.Collections.IEnumerator FadeToBlack()
+    public void FadeToBlack()
     {
         isFading = true;
         animator.SetTrigger("FadeOut");
-
-        yield return new WaitForSeconds(1.75f);
     }
 
     public void OnFadeCompleted()
     {
         isFading = false;
+        SceneManager.LoadScene(playerData.checkpoint);
     }
 
     public bool GetIsFading()
