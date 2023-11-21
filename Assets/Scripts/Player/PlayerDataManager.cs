@@ -9,6 +9,11 @@ public class PlayerDataManager : MonoBehaviour
     // Resets player data to the starting state
     public void ResetPlayerData()
     {
+        playerData.checkpoint = 1;
+    }
+
+    public void SetToTitle()
+    {
         playerData.checkpoint = 0;
     }
 }
