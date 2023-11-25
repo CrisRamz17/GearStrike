@@ -7,7 +7,7 @@ public class MobAI : MonoBehaviour
 {
     private NavMeshAgent agent;
     private Transform playerLoc;
-    [SerializeField] private float walkSpeed = 3f;
+    [SerializeField] private float walkSpeed = 2.5f;
     [SerializeField] private float chaseSpeed = 4f;
     [SerializeField] private float acceleration = 8f;
     [SerializeField] private float stunTime = 3f;
