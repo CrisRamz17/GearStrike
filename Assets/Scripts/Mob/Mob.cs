@@ -22,7 +22,7 @@ public class Mob : MonoBehaviour
     {
         if (other.gameObject.tag == "Bullet")
         {
-            Debug.Log("Bullet touched Mob!");
+            //Debug.Log("Bullet touched Mob!");
             Die();
         }
     }
@@ -31,8 +31,8 @@ public class Mob : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Mob touched Player!");
-            Debug.Log("Player is dead!");
+            //Debug.Log("Mob touched Player!");
+            //Debug.Log("Player is dead!");
             Destroy(other.gameObject);
             sceneFader.FadeToBlack();
         }

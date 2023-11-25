@@ -21,12 +21,12 @@ public class Bullet : MonoBehaviour
 
         if(collision.gameObject.CompareTag("Enemy"))
         {
-            Debug.Log("Bullet hit mob!");
+            //Debug.Log("Bullet hit mob!");
             Destroy(collision.gameObject);
         }
         else
         {
-            Debug.Log("Bullet hit " + collision.gameObject.name + "!");
+            //Debug.Log("Bullet hit " + collision.gameObject.name + "!");
         }
     }
 }
