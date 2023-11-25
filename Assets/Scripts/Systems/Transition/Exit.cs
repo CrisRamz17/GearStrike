@@ -20,7 +20,7 @@ public class Exit : MonoBehaviour
             //ensure Player only hits Exit once
             if (!sceneFader.GetIsFading())
             {
-                Debug.Log("Player has exited!");
+                //Debug.Log("Player has exited!");
                 playerData.checkpoint++;
                 sceneFader.FadeToBlack();
             }
