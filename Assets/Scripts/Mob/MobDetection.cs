@@ -32,7 +32,7 @@ public class MobDetection : MonoBehaviour
 
         if (mobAI == null)
         {
-            Debug.LogError("MobAI script not found on Mob object!");
+            Debug.LogError("Mob oject with MobAI script not found!");
         }
     }
 

@@ -7,8 +7,11 @@ public class MobAI : MonoBehaviour
 {
     private NavMeshAgent agent;
     private Transform playerLoc;
-    bool follow = false;
+    [SerializeField] private float walkSpeed = 3f;
+    [SerializeField] private float chaseSpeed = 4f;
+    [SerializeField] private float acceleration = 8f;
     [SerializeField] private float stunTime = 3f;
+    bool follow = false;
     [SerializeField] private Transform[] waypoints;
     int waypointIndex;
     Vector3 target;
@@ -21,6 +24,10 @@ public class MobAI : MonoBehaviour
 
         // Get NavMeshAgent component
         agent = GetComponent<NavMeshAgent>();
+
+        // Set NavMeshAgent speed/acceleration
+        agent.speed = walkSpeed;
+        agent.acceleration = acceleration;
 
         UpdateDestination();
     }
@@ -58,6 +65,11 @@ public class MobAI : MonoBehaviour
         {
             // Mob will return to waypoints
             Invoke(nameof(UpdateDestination), stunTime);
+            TriggerNormalSpeed();
+        }
+        else
+        {
+            TriggerChaseSpeed();
         }
     }
 
@@ -81,5 +93,15 @@ public class MobAI : MonoBehaviour
         {
             waypointIndex = 0;
         }
+    }
+
+    public void TriggerChaseSpeed()
+    {
+        agent.speed = chaseSpeed;
+    }
+
+    public void TriggerNormalSpeed()
+    {
+        agent.speed = walkSpeed;
     }
 }
