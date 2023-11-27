@@ -7,12 +7,13 @@ public class MobDetection : MonoBehaviour
     [SerializeField] private float sphereRadius = 1.0f;
     [SerializeField] private float sphereDistance = 4.0f;
     [SerializeField] private LayerMask detectionLayer; // layer mask for the objects
-    [SerializeField] private GameObject discoverySFX;
+    [SerializeField] private AudioSource discoverySFX;
     private GameObject player;
     private MobAI mobAI;
 
     private bool hit;
     private bool wasHitLastFrame;
+    private bool played = false;
     
     // Start is called before the first frame update
     void Start()
@@ -63,13 +64,19 @@ public class MobDetection : MonoBehaviour
             */
 
             //Debug.Log("Player detected: " + hitInfo.collider.gameObject.name);
-            //Instantiate(discoverySFX);
 
             
+
+
             if (hit != wasHitLastFrame)
             {
                 mobAI.SetFollow(hit);
                 wasHitLastFrame = hit;
+                if (!discoverySFX.isPlaying && hit && !played)
+                {
+                    Instantiate(discoverySFX);
+                    played = true;
+                }
             }
         }
     }

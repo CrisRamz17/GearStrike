@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731715, g: 0.13414735, b: 0.121078536, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1274,7 +1274,7 @@ PrefabInstance:
     - target: {fileID: 1136913132, guid: 62f4c63d2e0823a409de357f857c2804, type: 3}
       propertyPath: discoverySFX
       value: 
-      objectReference: {fileID: 2119345545599907324, guid: 52e5d91b475d74f468b13489a355bc10,
+      objectReference: {fileID: 9133226381387319660, guid: 52e5d91b475d74f468b13489a355bc10,
         type: 3}
     - target: {fileID: 2534888627168168768, guid: 62f4c63d2e0823a409de357f857c2804,
         type: 3}
