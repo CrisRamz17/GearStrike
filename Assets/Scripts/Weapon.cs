@@ -20,7 +20,7 @@ public class Weapon : MonoBehaviour
             Instantiate(gunshotSFX);
             bullet.GetComponent<Rigidbody>().velocity = bulletSpawnpoint.forward * bulletSpeed;
 
-            timesinceLastShot = 0;
+            timeSinceLastShot = 0;
             StartCoroutine(shotTimer(shotCooldown));
         }
     }
