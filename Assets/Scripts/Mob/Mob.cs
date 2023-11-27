@@ -18,21 +18,21 @@ public class Mob : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
+    /*private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Bullet")
         {
-            //Debug.Log("Bullet touched Mob!");
+            Debug.Log("Bullet touched Mob!");
             Die();
         }
-    }
+    }*/
 
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            //Debug.Log("Mob touched Player!");
-            //Debug.Log("Player is dead!");
+            Debug.Log("Mob touched Player!");
+            Debug.Log("Player is dead!");
             Destroy(other.gameObject);
             sceneFader.FadeToBlack();
         }
@@ -50,10 +50,11 @@ public class Mob : MonoBehaviour
     }
     */
 
-    private void Die()
+    /*private void Die()
     {
         Destroy(this.gameObject);
-    }
+
+    }*/
 
     /*
     private void ReduceHealth(int i)

@@ -129,6 +129,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39df5eefc2c573a4583d5c9675c12a3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyDeathSFX: {fileID: 3553928186533672033, guid: 36902bfcb16d27942bf2a695b0cc1903,
+    type: 3}
   life: 3
 --- !u!108 &1666836345274923927
 Light:

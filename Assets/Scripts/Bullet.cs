@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    public GameObject enemyDeathSFX;
+
     public float life = 3f;
 
     void Awake()
@@ -23,6 +25,7 @@ public class Bullet : MonoBehaviour
         {
             //Debug.Log("Bullet hit mob!");
             Destroy(collision.gameObject);
+            Instantiate(enemyDeathSFX);
         }
         else
         {

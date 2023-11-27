@@ -5,10 +5,11 @@ using UnityEngine;
 public class PlayerDataManager : MonoBehaviour
 {
     [SerializeField] private PlayerData playerData;
-
+    public GameObject buttonSFX;
     // Resets player data to the starting state
     public void ResetPlayerData()
     {
+        Instantiate(buttonSFX);
         playerData.checkpoint = 1;
     }
 
