@@ -17,6 +17,8 @@ public class MobAI : MonoBehaviour
     public AudioSource sound1; public AudioSource sound2; public AudioSource sound3;
     int waypointIndex;
     Vector3 target;
+    private MobAutomaton automaton;
+    private Animator animator;
     
     // Start is called before the first frame update
     void Start()
@@ -24,6 +26,9 @@ public class MobAI : MonoBehaviour
         idleList = new AudioSource[] { sound1, sound2, sound3 };
         // Find Player location
         playerLoc = GameObject.FindWithTag("Player").transform;
+
+        // Get Animator component
+        animator = GetComponentInChildren<Animator>();
 
         // Get NavMeshAgent component
         agent = GetComponent<NavMeshAgent>();
@@ -49,13 +54,26 @@ public class MobAI : MonoBehaviour
             }
             else
             {
-                //Invoke(nameof(UpdateDestination), stunTime);
-                
-                // when Mob gets to waypoint
-                if (Vector3.Distance(transform.position, target) < 1)
+                if (waypoints.Length > 0)
                 {
-                    IterateWaypointIndex();
-                    UpdateDestination();
+                    if (!animator.GetBool("isWalking"))
+                    {
+                        animator.SetBool("isWalking", true);
+                    }
+
+                    // when Mob gets to waypoint
+                    if (Vector3.Distance(transform.position, target) < 1)
+                    {
+                        IterateWaypointIndex();
+                        UpdateDestination();
+                    }
+                }
+                else
+                {
+                    if (animator.GetBool("isWalking"))
+                    {
+                        animator.SetBool("isWalking", false);
+                    }
                 }
             }
         }
@@ -94,7 +112,7 @@ public class MobAI : MonoBehaviour
         waypointIndex++;
 
         // when the last waypoint is reached, go back to the first
-        if (waypointIndex == waypoints.Length)
+        if (waypointIndex >= waypoints.Length)
         {
             waypointIndex = 0;
         }
@@ -103,6 +121,7 @@ public class MobAI : MonoBehaviour
     public void TriggerChaseSpeed()
     {
         agent.speed = chaseSpeed;
+        animator.SetBool("isWalking", true);
     }
 
     public void TriggerNormalSpeed()
@@ -111,7 +130,7 @@ public class MobAI : MonoBehaviour
     }
     IEnumerator RandomTime()
     {
-        Debug.Log("balls");
+        Debug.Log("RandomTime()");
         float randomDelay = Random.Range(2f, 20f);
         yield return new WaitForSeconds(randomDelay);
 
