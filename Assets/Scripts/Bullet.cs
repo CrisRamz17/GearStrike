@@ -6,7 +6,6 @@ public class Bullet : MonoBehaviour
 {
     [SerializeField] private GameObject enemyDeathSFX;
     [SerializeField] private GameObject bulletHitSFX;
-
     [SerializeField] private float life = 3f;
 
     void Awake()
@@ -22,11 +21,15 @@ public class Bullet : MonoBehaviour
     {
         Destroy(this.gameObject); // destroys bullet
 
-        if(collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy"))
         {
             //Debug.Log("Bullet hit mob!");
             Destroy(collision.gameObject);
             Instantiate(enemyDeathSFX);
+        }
+        else if (collision.gameObject.CompareTag("Portal"))
+        { // If Bullet hits entrance or exit block
+            // Do nothing
         }
         else
         {

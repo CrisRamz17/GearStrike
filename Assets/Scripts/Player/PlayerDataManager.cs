@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerDataManager : MonoBehaviour
 {
     [SerializeField] private PlayerData playerData;
-    [SerializeField] private GameObject buttonSFX;
+    public GameObject buttonSFX;
     // Resets player data to the starting state
     public void ResetPlayerData()
     {
@@ -15,6 +15,7 @@ public class PlayerDataManager : MonoBehaviour
 
     public void SetToTitle()
     {
+        Instantiate(buttonSFX);
         playerData.checkpoint = 0;
     }
 }
