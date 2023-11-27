@@ -10,6 +10,7 @@ public class Weapon : MonoBehaviour
     public float shotCooldown = 2f;
     private float timesinceLastShot;
     public GameObject gunshotSFX;
+    public GameObject primeSFX;
     void Update()
     {
         timesinceLastShot += Time.deltaTime;
@@ -19,6 +20,12 @@ public class Weapon : MonoBehaviour
             Instantiate(gunshotSFX);
             bullet.GetComponent<Rigidbody>().velocity = bulletSpawnpoint.forward * bulletSpeed;
             timesinceLastShot = 0;
+            StartCoroutine(shotTimer(shotCooldown));
         }
+    }
+    IEnumerator shotTimer(float time)
+    {
+        yield return new WaitForSeconds(time);
+        Instantiate(primeSFX);
     }
 }

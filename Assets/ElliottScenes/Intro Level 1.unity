@@ -505,6 +505,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2901845693357136988, guid: 9f0ad334e67b845359e89c7bac588a50,
+        type: 3}
+      propertyPath: primeSFX
+      value: 
+      objectReference: {fileID: 1197560606002251515, guid: 752fa1f48f2071f45870eecc1a4465eb,
+        type: 3}
+    - target: {fileID: 2901845693357136988, guid: 9f0ad334e67b845359e89c7bac588a50,
+        type: 3}
+      propertyPath: primeSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 3fe33f86f10fd614abc3581f33ddf157, type: 3}
     - target: {fileID: 2980407304388253562, guid: 9f0ad334e67b845359e89c7bac588a50,
         type: 3}
       propertyPath: m_Name
@@ -1270,7 +1281,7 @@ PrefabInstance:
         type: 3}
       propertyPath: playerDeathSFX
       value: 
-      objectReference: {fileID: 8677596666328437459, guid: 95932b3618d27f745b45ccaff6dd9ea9,
+      objectReference: {fileID: 8313125211766153574, guid: ecacbfc126ba0624188432d4552744a2,
         type: 3}
     - target: {fileID: 5684223176468906811, guid: 62f4c63d2e0823a409de357f857c2804,
         type: 3}
@@ -1330,6 +1341,29 @@ PrefabInstance:
     - target: {fileID: 8618820870007365532, guid: 62f4c63d2e0823a409de357f857c2804,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9093510691959981935, guid: 62f4c63d2e0823a409de357f857c2804,
+        type: 3}
+      propertyPath: sound1
+      value: 
+      objectReference: {fileID: 7278557396573833993, guid: c2c20b3132d686144aa549ad7ca60d96,
+        type: 3}
+    - target: {fileID: 9093510691959981935, guid: 62f4c63d2e0823a409de357f857c2804,
+        type: 3}
+      propertyPath: sound2
+      value: 
+      objectReference: {fileID: 3502121373968697755, guid: b6da9c4693cf2f84fa9584ce4db065e0,
+        type: 3}
+    - target: {fileID: 9093510691959981935, guid: 62f4c63d2e0823a409de357f857c2804,
+        type: 3}
+      propertyPath: sound3
+      value: 
+      objectReference: {fileID: 5689206266351350714, guid: 5f0fcfd856556a3439685f59dd39c91d,
+        type: 3}
+    - target: {fileID: 9093510691959981935, guid: 62f4c63d2e0823a409de357f857c2804,
+        type: 3}
+      propertyPath: idleList.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9093510691959981935, guid: 62f4c63d2e0823a409de357f857c2804,
