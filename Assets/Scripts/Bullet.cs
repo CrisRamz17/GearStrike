@@ -5,6 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public GameObject enemyDeathSFX;
+    public GameObject bulletHitsfx;
 
     public float life = 3f;
 
@@ -30,6 +31,7 @@ public class Bullet : MonoBehaviour
         else
         {
             //Debug.Log("Bullet hit " + collision.gameObject.name + "!");
+            Instantiate(bulletHitsfx);
         }
     }
 }

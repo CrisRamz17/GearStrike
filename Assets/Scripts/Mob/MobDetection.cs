@@ -7,6 +7,7 @@ public class MobDetection : MonoBehaviour
     [SerializeField] private float sphereRadius = 1.0f;
     [SerializeField] private float sphereDistance = 4.0f;
     [SerializeField] private LayerMask detectionLayer; // layer mask for the objects
+    public GameObject discoverySFX;
     private GameObject player;
     private MobAI mobAI;
 
@@ -62,6 +63,7 @@ public class MobDetection : MonoBehaviour
             */
 
             //Debug.Log("Player detected: " + hitInfo.collider.gameObject.name);
+            Instantiate(discoverySFX);
 
             
             if (hit != wasHitLastFrame)
