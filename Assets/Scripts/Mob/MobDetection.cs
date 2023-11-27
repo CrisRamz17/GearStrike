@@ -63,7 +63,7 @@ public class MobDetection : MonoBehaviour
             */
 
             //Debug.Log("Player detected: " + hitInfo.collider.gameObject.name);
-            Instantiate(discoverySFX);
+            //Instantiate(discoverySFX);
 
             
             if (hit != wasHitLastFrame)

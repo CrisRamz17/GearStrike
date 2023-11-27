@@ -33,7 +33,7 @@ public class Mob : MonoBehaviour
         {
             Debug.Log("Mob touched Player!");
             Debug.Log("Player is dead!");
-            Instantiate(playerDeathSFX);
+            //Instantiate(playerDeathSFX);
             Destroy(other.gameObject);
             sceneFader.FadeToBlack();
         }
