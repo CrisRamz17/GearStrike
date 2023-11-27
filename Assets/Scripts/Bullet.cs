@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public GameObject enemyDeathSFX;
-    public GameObject bulletHitsfx;
+    [SerializeField] private GameObject enemyDeathSFX;
+    [SerializeField] private GameObject bulletHitSFX;
 
-    public float life = 3f;
+    [SerializeField] private float life = 3f;
 
     void Awake()
     {
@@ -31,7 +31,7 @@ public class Bullet : MonoBehaviour
         else
         {
             //Debug.Log("Bullet hit " + collision.gameObject.name + "!");
-            Instantiate(bulletHitsfx);
+            Instantiate(bulletHitSFX);
         }
     }
 }

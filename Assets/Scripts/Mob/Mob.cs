@@ -6,7 +6,7 @@ public class Mob : MonoBehaviour
 {
     //[SerializeField] private int health; //unused for now (1-hit kill)
     private SceneFader sceneFader;
-    public GameObject playerDeathSFX;
+    [SerializeField] private GameObject playerDeathSFX;
     void Start()
     {
         sceneFader = FindObjectOfType<SceneFader>();

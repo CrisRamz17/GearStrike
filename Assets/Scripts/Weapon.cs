@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    public Transform bulletSpawnpoint;
-    public GameObject bulletPrefab;
-    public float bulletSpeed = 10;
-    public float shotCooldown = 2f;
-    private float timesinceLastShot;
-    public GameObject gunshotSFX;
+    [SerializeField] private Transform bulletSpawnpoint;
+    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private float bulletSpeed = 10;
+    [SerializeField] private float shotCooldown = 2f;
+    private float timeSinceLastShot;
+    [SerializeField] private GameObject gunshotSFX;
     void Update()
     {
-        timesinceLastShot += Time.deltaTime;
-        if (Input.GetMouseButtonDown(0) && timesinceLastShot >= shotCooldown)
+        timeSinceLastShot += Time.deltaTime;
+        if (Input.GetMouseButtonDown(0) && timeSinceLastShot >= shotCooldown)
         {
             var bullet = Instantiate(bulletPrefab, bulletSpawnpoint.position, bulletSpawnpoint.rotation);
             Instantiate(gunshotSFX);
             bullet.GetComponent<Rigidbody>().velocity = bulletSpawnpoint.forward * bulletSpeed;
-            timesinceLastShot = 0;
+            timeSinceLastShot = 0;
         }
     }
 }
