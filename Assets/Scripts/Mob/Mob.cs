@@ -6,7 +6,7 @@ public class Mob : MonoBehaviour
 {
     //[SerializeField] private int health; //unused for now (1-hit kill)
     private SceneFader sceneFader;
-
+    public GameObject playerDeathSFX;
     void Start()
     {
         sceneFader = FindObjectOfType<SceneFader>();
@@ -33,6 +33,7 @@ public class Mob : MonoBehaviour
         {
             Debug.Log("Mob touched Player!");
             Debug.Log("Player is dead!");
+            Instantiate(playerDeathSFX);
             Destroy(other.gameObject);
             sceneFader.FadeToBlack();
         }

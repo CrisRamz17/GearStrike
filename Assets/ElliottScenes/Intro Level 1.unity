@@ -637,7 +637,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 389328744}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c5d14d76ac952764e8c3074391de7317, type: 3}
@@ -1236,11 +1236,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1136913132, guid: 62f4c63d2e0823a409de357f857c2804, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1136913132, guid: 62f4c63d2e0823a409de357f857c2804, type: 3}
+      propertyPath: discoverySFX
+      value: 
+      objectReference: {fileID: 2119345545599907324, guid: 52e5d91b475d74f468b13489a355bc10,
+        type: 3}
     - target: {fileID: 2534888627168168768, guid: 62f4c63d2e0823a409de357f857c2804,
         type: 3}
       propertyPath: enemyDeathSFX
       value: 
       objectReference: {fileID: 3553928186533672033, guid: 36902bfcb16d27942bf2a695b0cc1903,
+        type: 3}
+    - target: {fileID: 2534888627168168768, guid: 62f4c63d2e0823a409de357f857c2804,
+        type: 3}
+      propertyPath: playerDeathSFX
+      value: 
+      objectReference: {fileID: 8677596666328437459, guid: 95932b3618d27f745b45ccaff6dd9ea9,
         type: 3}
     - target: {fileID: 5684223176468906811, guid: 62f4c63d2e0823a409de357f857c2804,
         type: 3}

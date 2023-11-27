@@ -131,6 +131,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyDeathSFX: {fileID: 3553928186533672033, guid: 36902bfcb16d27942bf2a695b0cc1903,
     type: 3}
+  bulletHitsfx: {fileID: 6293125110592080973, guid: c86b3b025d2818c49b228361b5e577d5,
+    type: 3}
   life: 3
 --- !u!108 &1666836345274923927
 Light:
