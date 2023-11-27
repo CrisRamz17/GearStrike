@@ -13,15 +13,15 @@ public class MobAI : MonoBehaviour
     [SerializeField] private float stunTime = 3f;
     bool follow = false;
     [SerializeField] private Transform[] waypoints;
-    public GameObject[] idleList;
-    public GameObject sound1; public GameObject sound2; public GameObject sound3;
+    public AudioSource[] idleList;
+    public AudioSource sound1; public AudioSource sound2; public AudioSource sound3;
     int waypointIndex;
     Vector3 target;
     
     // Start is called before the first frame update
     void Start()
     {
-        idleList = new GameObject[] { sound1, sound2, sound3 };
+        idleList = new AudioSource[] { sound1, sound2, sound3 };
         // Find Player location
         playerLoc = GameObject.FindWithTag("Player").transform;
 
@@ -123,8 +123,12 @@ public class MobAI : MonoBehaviour
         if (idleList.Length > 0)
         {
             int randomIndex = Random.Range(0, idleList.Length);
-            GameObject sound = idleList[randomIndex];
-            Instantiate(sound);
+            AudioSource sound = idleList[randomIndex];
+            if (!sound.isPlaying)
+            {
+                Instantiate(sound);
+            }
+
 
             StartCoroutine(RandomTime());
         }
