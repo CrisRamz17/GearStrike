@@ -178,6 +178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   playerData: {fileID: 11400000, guid: 8eb029e13d0eaad44b3a62e889f4045f, type: 2}
+  timeout: 0
 --- !u!114 &95089862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -526,6 +527,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1255456216}
   playerData: {fileID: 11400000, guid: 8eb029e13d0eaad44b3a62e889f4045f, type: 2}
+  timeout: 1
 --- !u!95 &1255456216
 Animator:
   serializedVersion: 5

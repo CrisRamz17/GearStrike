@@ -135,6 +135,8 @@ MonoBehaviour:
   shotCooldown: 2
   gunshotSFX: {fileID: 4377327961291124382, guid: 8f7df254a95e04140a99cf289790d76d,
     type: 3}
+  primeSFX: {fileID: 1197560606002251515, guid: 752fa1f48f2071f45870eecc1a4465eb,
+    type: 3}
 --- !u!1 &5543552085096124612
 GameObject:
   m_ObjectHideFlags: 0
@@ -646,7 +648,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 209118b2c04274845821dbd434c75a24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkpoint: 0
 --- !u!136 &8013492059213423080
 CapsuleCollider:
   m_ObjectHideFlags: 0

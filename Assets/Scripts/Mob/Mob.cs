@@ -31,11 +31,11 @@ public class Mob : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Mob touched Player!");
+            /*Debug.Log("Mob touched Player!");
             Debug.Log("Player is dead!");
-            //Instantiate(playerDeathSFX);
+            Instantiate(playerDeathSFX);
             Destroy(other.gameObject);
-            sceneFader.FadeToBlack();
+            sceneFader.FadeToBlack();*/
         }
     }
 

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &7815506767980186549
+--- !u!1001 &6782785453220367601
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,23 +10,48 @@ PrefabInstance:
     - target: {fileID: -2832678191062128561, guid: c7e7a80abd23b3342b9bc32280253b55,
         type: 3}
       propertyPath: delay
-      value: 2
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4261507015369574392, guid: c7e7a80abd23b3342b9bc32280253b55,
         type: 3}
       propertyPath: m_Name
-      value: Bullet Collision
+      value: EnemyIdle1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6410093999631694696, guid: c7e7a80abd23b3342b9bc32280253b55,
+        type: 3}
+      propertyPath: Priority
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 6410093999631694696, guid: c7e7a80abd23b3342b9bc32280253b55,
         type: 3}
       propertyPath: m_Volume
-      value: 0.105
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6410093999631694696, guid: c7e7a80abd23b3342b9bc32280253b55,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 6410093999631694696, guid: c7e7a80abd23b3342b9bc32280253b55,
+        type: 3}
+      propertyPath: MinDistance
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6410093999631694696, guid: c7e7a80abd23b3342b9bc32280253b55,
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: cc5bfeda971b4b44bb8d90045d40c094, type: 3}
+      objectReference: {fileID: 8300000, guid: 41178905c74f5b14183783107e798953, type: 3}
+    - target: {fileID: 6410093999631694696, guid: c7e7a80abd23b3342b9bc32280253b55,
+        type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6410093999631694696, guid: c7e7a80abd23b3342b9bc32280253b55,
+        type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7939901956772942669, guid: c7e7a80abd23b3342b9bc32280253b55,
         type: 3}
       propertyPath: m_RootOrder

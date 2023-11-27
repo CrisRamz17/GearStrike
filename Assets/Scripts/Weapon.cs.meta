@@ -3,7 +3,14 @@ guid: 0dc9756ef931ff646a872a42c3cd1fc9
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - bulletSpawnpoint: {instanceID: 0}
+  - bulletPrefab: {fileID: 3818632362740858794, guid: 472e3d609ce5de1408be62a1b8412347,
+      type: 3}
+  - gunshotSFX: {fileID: 4377327961291124382, guid: 8f7df254a95e04140a99cf289790d76d,
+      type: 3}
+  - primeSFX: {fileID: 1197560606002251515, guid: 752fa1f48f2071f45870eecc1a4465eb,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

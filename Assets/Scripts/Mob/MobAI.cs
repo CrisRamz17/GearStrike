@@ -13,12 +13,15 @@ public class MobAI : MonoBehaviour
     [SerializeField] private float stunTime = 3f;
     bool follow = false;
     [SerializeField] private Transform[] waypoints;
+    public GameObject[] idleList;
+    public GameObject sound1; public GameObject sound2; public GameObject sound3;
     int waypointIndex;
     Vector3 target;
     
     // Start is called before the first frame update
     void Start()
     {
+        idleList = new GameObject[] { sound1, sound2, sound3 };
         // Find Player location
         playerLoc = GameObject.FindWithTag("Player").transform;
 
@@ -30,6 +33,8 @@ public class MobAI : MonoBehaviour
         agent.acceleration = acceleration;
 
         UpdateDestination();
+
+        StartCoroutine(RandomTime());
     }
 
     // Update is called once per frame
@@ -103,5 +108,29 @@ public class MobAI : MonoBehaviour
     public void TriggerNormalSpeed()
     {
         agent.speed = walkSpeed;
+    }
+    IEnumerator RandomTime()
+    {
+        Debug.Log("balls");
+        float randomDelay = Random.Range(2f, 20f);
+        yield return new WaitForSeconds(randomDelay);
+
+        RandomIdle();
+    }
+
+    void RandomIdle()
+    {
+        if (idleList.Length > 0)
+        {
+            int randomIndex = Random.Range(0, idleList.Length);
+            GameObject sound = idleList[randomIndex];
+            Instantiate(sound);
+
+            StartCoroutine(RandomTime());
+        }
+        else
+        {
+            Debug.LogError("No sounds assigned to idleList");
+        }
     }
 }
