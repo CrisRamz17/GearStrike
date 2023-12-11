@@ -8,9 +8,19 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float speed = 8;
     private Vector2 move, mouseLook;
     private Vector3 rotationTarget;
+    private Animator animator;
 
     public void onMove(InputAction.CallbackContext context)
     {
+        if (context.phase == InputActionPhase.Started || context.phase == InputActionPhase.Performed)
+        {
+            animator.SetBool("isWalking", true);
+        }
+        else if (context.phase == InputActionPhase.Canceled)
+        {
+            animator.SetBool("isWalking", false);
+        }
+
         move = context.ReadValue<Vector2>(); // read the value of the input
     }
 
@@ -21,7 +31,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
