@@ -11,6 +11,11 @@ public class Weapon : MonoBehaviour
     [SerializeField] private float shotCooldown = 2f;
     private float timeSinceLastShot;
     [SerializeField] private GameObject gunshotSFX;
+
+    void Start()
+    {
+        timeSinceLastShot = shotCooldown;
+    }
     void Update()
     {
         timeSinceLastShot += Time.deltaTime;
