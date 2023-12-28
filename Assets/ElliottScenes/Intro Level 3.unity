@@ -1989,6 +1989,11 @@ PrefabInstance:
       propertyPath: timeout
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8013492059213423080, guid: 9f0ad334e67b845359e89c7bac588a50,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f0ad334e67b845359e89c7bac588a50, type: 3}
 --- !u!1 &1362739281
@@ -2113,7 +2118,7 @@ PrefabInstance:
     - target: {fileID: 2684062691494862079, guid: 4682b2417433e5e478f8b09e331032ec,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10.81
+      value: 10.2
       objectReference: {fileID: 0}
     - target: {fileID: 2684062691494862079, guid: 4682b2417433e5e478f8b09e331032ec,
         type: 3}
@@ -2160,6 +2165,11 @@ PrefabInstance:
       propertyPath: MinDistance
       value: 14.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3533285869779343475, guid: 4682b2417433e5e478f8b09e331032ec,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 4a0152fece37b47f0aa057d543376014, type: 3}
     - target: {fileID: 3533285869779343475, guid: 4682b2417433e5e478f8b09e331032ec,
         type: 3}
       propertyPath: rolloffMode
