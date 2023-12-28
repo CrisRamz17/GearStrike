@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: -2832678191062128561, guid: c7e7a80abd23b3342b9bc32280253b55,
         type: 3}
       propertyPath: delay
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4261507015369574392, guid: c7e7a80abd23b3342b9bc32280253b55,
         type: 3}
@@ -31,7 +31,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 812b7c383df359c40ae462d12628d807, type: 3}
+      objectReference: {fileID: 8300000, guid: 3dd2609ded73d4d858a8fd9c022b6795, type: 3}
     - target: {fileID: 7939901956772942669, guid: c7e7a80abd23b3342b9bc32280253b55,
         type: 3}
       propertyPath: m_RootOrder
