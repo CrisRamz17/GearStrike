@@ -78,6 +78,7 @@ public class MobDetection : MonoBehaviour
                     played = true;
                 }
             }
+            played = false;
         }
     }
 
