@@ -19,9 +19,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6410093999631694696, guid: c7e7a80abd23b3342b9bc32280253b55,
         type: 3}
+      propertyPath: m_Volume
+      value: 0.294
+      objectReference: {fileID: 0}
+    - target: {fileID: 6410093999631694696, guid: c7e7a80abd23b3342b9bc32280253b55,
+        type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 77f76836c58dcdd488082cf64a2addec, type: 3}
+      objectReference: {fileID: 8300000, guid: af1322d070495c747bc349b8f9e7cf01, type: 3}
     - target: {fileID: 6410093999631694696, guid: c7e7a80abd23b3342b9bc32280253b55,
         type: 3}
       propertyPath: m_PlayOnAwake

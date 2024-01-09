@@ -24,6 +24,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6410093999631694696, guid: c7e7a80abd23b3342b9bc32280253b55,
         type: 3}
+      propertyPath: m_Volume
+      value: 0.591
+      objectReference: {fileID: 0}
+    - target: {fileID: 6410093999631694696, guid: c7e7a80abd23b3342b9bc32280253b55,
+        type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -31,16 +36,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 43df1c0899b7e7a408d2ca944639c150, type: 3}
+      objectReference: {fileID: 8300000, guid: fe522c25c4b6e054dbfa077b404abb80, type: 3}
     - target: {fileID: 6410093999631694696, guid: c7e7a80abd23b3342b9bc32280253b55,
         type: 3}
-      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      propertyPath: DopplerLevel
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6410093999631694696, guid: c7e7a80abd23b3342b9bc32280253b55,
         type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6410093999631694696, guid: c7e7a80abd23b3342b9bc32280253b55,
+        type: 3}
       propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
-      value: 0.24
+      value: 0.224
       objectReference: {fileID: 0}
     - target: {fileID: 7939901956772942669, guid: c7e7a80abd23b3342b9bc32280253b55,
         type: 3}
